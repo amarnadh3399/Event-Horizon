@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 207 90% 94%; /* #E3F2FD - Very light blue */
+    --foreground: 222 47% 11%; /* Dark blue-gray for text */
+
+    --card: 207 90% 100%; /* White for cards */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 207 90% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 90% 61%; /* #4285F4 - Saturated Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 210 40% 96.1%; /* Light grayish blue */
+    --secondary-foreground: 217 90% 45%; /* Darker blue for secondary text */
+
+    --muted: 210 40% 90%; /* Slightly darker muted */
+    --muted-foreground: 210 30% 50%; /* Muted text */
+
+    --accent: 288 62% 42%; /* #9C27B0 - Vibrant Purple */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 30% 80%; /* Lighter border for the theme */
+    --input: 210 30% 88%; /* Input background */
+    --ring: 217 90% 61%; /* Primary color for ring */
+
+    --radius: 0.5rem;
+
+    /* Custom variables for calendar */
+    --calendar-day-highlight: hsl(var(--primary) / 0.1);
+    --calendar-current-day-bg: hsl(var(--accent));
+    --calendar-current-day-text: hsl(var(--accent-foreground));
+  }
+
+  .dark {
+    --background: 222 47% 11%; /* Dark blue-gray */
+    --foreground: 0 0% 98%; /* Light gray for text */
+
+    --card: 222 40% 15%; /* Darker card */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 40% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 90% 61%; /* #4285F4 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 30% 25%; /* Dark secondary */
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 222 30% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 288 62% 52%; /* #9C27B0 slightly lighter for dark mode */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 30% 30%;
+    --input: 222 30% 25%;
+    --ring: 217 90% 61%;
+    
+    --calendar-day-highlight: hsl(var(--primary) / 0.2);
+    --calendar-current-day-bg: hsl(var(--accent));
+    --calendar-current-day-text: hsl(var(--accent-foreground));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
